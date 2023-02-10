@@ -21,16 +21,20 @@
     },
 
     {
-        "title": "",
+        "title": "Idea for a Childrens Book",
         "date": 2019-05-23,
-        "content": "",
+        "content": "Not one, but two very hungry catepillars!",
         "journal_id": 4,
     },
 
     {
         "title": "Stupid Seagulls",
         "date": 2017-09-16,
-        "content": "Today at the beach, a seagull stole my sandwich out of my hands. I chased it hoping to save a piece and ended up falling face first in the sand. It's safe to say that I'll",
+        "content": "Today at the beach, a seagull stole my sandwich out of my hands. I chased it hoping to save a piece of it and ended up falling face first in the sand. It's safe to say that I'll never be going to that beach again.",
         "journal_id": 5,
     },
-]
+];
+
+const seedEntry = () => Entry.bulkCreate(entryData);
+
+module.exports = seedEntry;
