@@ -18,7 +18,7 @@ router.post("/", withAuth, async (req, res) => {
 });
 
 // Delete Specific Entry
-router.delete("/:id", withAuth, async, (req, res) => {
+router.delete("/:id", withAuth, async (req, res) => {
     try {
         const entryData = await Entry.destroy({
             where: {
