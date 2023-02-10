@@ -1,5 +1,5 @@
-const { Model, DataTypes } = require('sequlize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequlize");
+const sequelize = require("../config/connection");
 
 class Journal extends Model {}
 
@@ -27,8 +27,8 @@ Journal.init(
         user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'user',
-                key: 'id',
+                model: "user",
+                key: "id",
             },
         }
     },
@@ -37,7 +37,7 @@ Journal.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'journal',
+        modelName: "journal",
     }
 );
 
