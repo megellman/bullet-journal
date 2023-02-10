@@ -4,7 +4,7 @@ const { Journal, Entry } = require("../models");
 // Login 
 router.get('/', (req, res) => {
     // If user has already logged in, then redirect to dashboard
-    if (req.session.loggedIn) {
+    if (req.session.logged_in) {
         res.redirect('/dashboard');
         return;
     }
@@ -17,17 +17,17 @@ router.get('/journals', async (req, res) => {
     try {
         const journalData = await Journal.findAll({
             where: {
-                user_id: req.session.userId,
+                user_id: req.session.user_id,
             },
         });
         if (!journalData) {
-            res.render('dashboard', { loggedIn: req.session.loggedIn });
+            res.render('dashboard', { loggedIn: req.session.logged_in });
             return;
         }
         const journals = journalData.map((journal) => journal.get({ plain: true }));
         res.render('dashboard', {
             journals,
-            loggedIn: req.session.loggedIn,
+            loggedIn: req.session.logged_in,
         });
     } catch (err) {
         res.status(500).json(err);
