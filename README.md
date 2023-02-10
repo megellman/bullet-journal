@@ -11,6 +11,9 @@
   - [Routes](#routes)
     - [Home Routes](#home-routes)
     - [API Routes](#api-routes)
+    - [Journals](#journals)
+    - [Entries](#entries)
+    - [Users](#users)
   - [Client Side JavaScript](#client-side-javascript)
     - [Event Listeners \& Handlers](#event-listeners--handlers)
   - [Handlebars](#handlebars)
@@ -54,20 +57,22 @@ Database: journal_db
 
 ### Home Routes
 / GET - render login page
-
-### API Routes
-* /api/journals - POST - create a journal
-* /api/entries - POST - create an entry
 * /journals/:id - GET - return specifc journal
 * /journals/:id/entries - GET - Return all entries where journal id === req.params.journal_id 
 * /journals/:id/entries/:entry_id - GET return specific entry
+* Render dashboard - GET all journals 
+
+### API Routes
+### Journals
+* /api/journals - POST - create a journal
+
+### Entries
+* /api/entries - POST - create an entry
+
+### Users
 * /api/user/login - POST - loggedIn = true,
-* Render dashboard
 * /api/user/logout - POST - Session.destroy
-* Render login page
 * /api/user - POST - loggedIn = true, 
-* User.create(username, email, password(bcrypt))
-* Render Dashboard
 
 ## Client Side JavaScript
 ### Event Listeners & Handlers 
