@@ -61,10 +61,10 @@ router.get('/journals/:id/entries/:entry_id', async (req, res) => {
     try {
         const entryData = await Entry.findByPk(req.params.entry_id);
 
-        const entries = entryData.map((entry) => entry.get({ plain: true }));
+        const entry = entryData.get({ plain: true });
 
         res.render('entry-details', {
-            entries,
+            entry,
             loggedIn: req.session.loggedIn,
         });
     } catch (err) {
