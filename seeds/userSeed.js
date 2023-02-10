@@ -1,0 +1,37 @@
+const path = require("path");
+const { User } = require(path.join(__dirname, "../models"));
+
+const userdata = [
+    {
+        username: "JohnDoe",
+        email: "noone@nowhere.com",
+        password: "12345678"
+    },
+    {
+        username: "JaneDoe",
+        email: "anon@aol.com",
+        password: "abcdefgh"
+    },
+    {
+        username: "HarryPotter",
+        email: "user@compuserve.com",
+        password: "abc123zyx"
+    },
+    {
+        username: "HermioneGranger",
+        email: "person@peoplepc.com",
+        password: "1234512345"
+    },
+    {
+        username: "RonWeasley",
+        email: "someone@yahoo.com",
+        password: "aaaaaaaa"
+    }
+
+];
+
+const seedUser = () => User.bulkCreate(userdata, {
+    individualHooks: true
+  });
+
+module.exports = seedUser;
