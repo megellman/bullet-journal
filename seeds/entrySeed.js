@@ -1,4 +1,5 @@
-const { Entry } = require("../models");
+const path = require("path")
+const { Entry } = require(path.join(__dirname, "../models"));
 
 const entryData = [
     {
