@@ -34,6 +34,6 @@ const journalData = [
     },
 ]
 
-const seedJournal = () => Journal.bulkCreate(journalData);
+const seedJournal = async () => await Journal.bulkCreate(journalData);
 
 module.exports = seedJournal;

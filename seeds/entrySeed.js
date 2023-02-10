@@ -38,6 +38,6 @@ const entryData = [
     },
 ];
 
-const seedEntry = () => Entry.bulkCreate(entryData);
+const seedEntry = async () => await Entry.bulkCreate(entryData);
 
 module.exports = seedEntry;
