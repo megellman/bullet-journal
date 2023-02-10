@@ -1,4 +1,6 @@
-[
+const { Entry } = require("../models");
+
+const entryData = [
     {
         "title": "Spray on Shoes",
         "date": 2016-10-03,
