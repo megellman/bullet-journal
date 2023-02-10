@@ -1,4 +1,7 @@
-[
+const path = require("path");
+const { Journal } = require(path.join(__dirname, "../models"));
+
+const journalData = [
     {
         "title": "Ideas",
         "date": 2016-10-02,
@@ -30,3 +33,7 @@
         "user_id": 5,
     },
 ]
+
+const seedJournal = () => Journal.bulkCreate(journalData);
+
+module.exports = seedJournal;
