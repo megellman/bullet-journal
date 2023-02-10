@@ -2,7 +2,7 @@ const router = requre("express").Router();
 const { Journal } = require("../../models");
 
 // Create a journal
-router.post('/journals', async (req, res) => {
+router.post('/', async (req, res) => {
     try {
         const journal = await Journal.create({
             title: req.body.title,
@@ -17,7 +17,7 @@ router.post('/journals', async (req, res) => {
 })
 
 // DELETE a journal
-router.delete('/journals/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
     try {
         const journal = await Journal.destroy({
             where: {
@@ -32,7 +32,7 @@ router.delete('/journals/:id', async (req, res) => {
 })
 
 // UPDATE a journal 
-router.put('/journals/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
     try {
         const journal = await Journal.update(req.body, {
             where: {
