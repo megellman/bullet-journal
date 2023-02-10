@@ -60,8 +60,8 @@ Database: journal_db
 * /api/entries - POST - create an entry
 * /journals/:id - GET - return specifc journal
 * /journals/:id/entries - GET - Return all entries where journal id === req.params.journal_id 
-*/journals/:id/entries/:entry_id - GET return specific entry
-*/api/user/login - POST - loggedIn = true,
+* /journals/:id/entries/:entry_id - GET return specific entry
+* /api/user/login - POST - loggedIn = true,
 * Render dashboard
 * /api/user/logout - POST - Session.destroy
 * Render login page
