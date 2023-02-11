@@ -1,0 +1,35 @@
+<section class="block">
+    {{#if journals}}
+    <div class="columns is-centered my-4">
+        <div class="column is-two-thirds-tablet is-three-quarters-desktop my-3">
+            <h2 class="p-3 is-family-secondary is-size-3 has-background-primary-light has-text-primary-dark has-border-color-primary-dark is-rounded">Select a Journal</h2>
+        </div>
+        <div class="column is-one-third-tablet is-one-quarter-desktop my-3">
+            <button id="create-journal" class="button is-primary-dark is-outlined">
+                <span class="is-hidden-tablet">
+                    <i class="fa-solid fa-plus is-size-3 is-primary-dark"></i>
+                </span>
+                <span class="is-hidden-mobile is-size-3 has-text-primary-dark">Create New Journal</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="columns is-centered my-3">
+        {{>journal-partial}}
+    </div>
+
+    {{else}}
+    <div class="hero is-primary is-halfheight">
+        <div class="hero-body justify-content-center">
+            <button id="create-journal" class="button is-primary-dark is-outlined">
+                <span class="is-hidden-mobile is-size-3 has-text-primary-dark">Create New Journal</span>
+            </button>
+        </div>
+    </div>
+    {{/if}}
+</section>
+
+<script src="/js/createJournal.js"></script>
+{{#if journals}}
+<script src="/js/journal.js"></script>
+{{/if}}
