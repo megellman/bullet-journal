@@ -1,14 +1,14 @@
 const router = require("express").Router();
-const path = require("path");
-const { Entry } = require(path.join(__dirname, "../../models"));
-const withAuth = require("../../utils/auth")
+const { Entry } = require("../../models");
+const withAuth = require("../../utils/auth");
 
 // Create new entry
-router.post("/", withAuth, async (req, res) => {
+router.post("/", async (req, res) => {
     try {
         const newEntry = await Entry.create({
             ...req.body,
             journal_id: req.session.journal_id,
+            user_id: req.session.user_id
         });
 
         res.status(200).json(newEntry);
@@ -19,7 +19,7 @@ router.post("/", withAuth, async (req, res) => {
 
 
 // Update entry
-router.put("/:id", withAuth, async (req, res) => {
+router.put("/:id", async (req, res) => {
     try {
         const entryData = await Entry.update(req.body, {
             where: {
@@ -39,12 +39,13 @@ router.put("/:id", withAuth, async (req, res) => {
 });
 
 // Delete Specific Entry
-router.delete("/:id", withAuth, async (req, res) => {
+router.delete("/:id", async (req, res) => {
     try {
         const entryData = await Entry.destroy({
             where: {
                 id: req.params.id,
-                journal_id: req.session.journal_id
+                journal_id: req.session.journal_id,
+                user_id: req.session.user_id  
             }
         });
 
