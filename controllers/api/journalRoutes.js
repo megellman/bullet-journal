@@ -1,4 +1,4 @@
-const router = requre("express").Router();
+const router = require("express").Router();
 const { Journal } = require("../../models");
 
 // Create a journal
