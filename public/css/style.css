@@ -1,24 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 .primary {
-    background-color: rgb(138, 155, 214);
-    color: black;
-    }
-    
-    .secondary {
-        background-color:rgb(115, 120, 139);
-        color: white;
-        border: solid rgb(152, 165, 215);
-    }
-    
-    .secondary:hover {
-        color: white;
-    }
-    
-    .tertiary {
-        background-color: #D6AB9F;
-        border: solid 2px rgb(112, 122, 162);
-    }
-    
-    .input {
-        /* border: solid 2px #D6AB9F; */
-        border: solid 2px rgb(112, 122, 162);
-    }
+background-color: rgb(148, 159, 199);
+color: black;
+}
+
+.secondary {
+    background-color:rgb(115, 120, 139);
+    color: white;
+    border: solid rgb(152, 165, 215);
+}
+
+.secondary:hover {
+    color: white;
+}
+
+.tertiary {
+    background-color: #D6AB9F;
+    border: solid 2px rgb(112, 122, 162);
+}
+
+.input {
+    /* border: solid 2px #D6AB9F; */
+    border: solid 2px rgb(112, 122, 162);
+}
+
+html {
+    background-image: url(./assets/pexels-ron-lach-10526880.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin:0 auto;
+}
+
+html, body {
+    min-height: 100%;
+}
