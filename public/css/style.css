@@ -1,0 +1,24 @@
+.primary {
+    background-color: rgb(138, 155, 214);
+    color: black;
+    }
+    
+    .secondary {
+        background-color:rgb(115, 120, 139);
+        color: white;
+        border: solid rgb(152, 165, 215);
+    }
+    
+    .secondary:hover {
+        color: white;
+    }
+    
+    .tertiary {
+        background-color: #D6AB9F;
+        border: solid 2px rgb(112, 122, 162);
+    }
+    
+    .input {
+        /* border: solid 2px #D6AB9F; */
+        border: solid 2px rgb(112, 122, 162);
+    }
