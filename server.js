@@ -22,17 +22,8 @@ const sess = {
 };
 app.use(session(sess));
 
-app.use(
-    session({
-      secret: "keyboard cat",
-      store: new SequelizeStore({
-        db: sequelize,
-      }),
-      resave: false,
-    })
-  );
-
-const hbs = exphbs.create({ helpers });
+// const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create(); //for dev only. Use the version on the line above once the helpers are created.
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
