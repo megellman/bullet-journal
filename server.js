@@ -23,7 +23,8 @@ const sess = {
 };
 app.use(session(sess));
 
-const hbs = exphbs.create({ helpers });
+// const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create(); //for dev only. Use the version on the line above once the helpers are created.
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
