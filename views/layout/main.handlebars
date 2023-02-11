@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bullet Journal</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bulma/bulma.css">
+    <script src="https://kit.fontawesome.com/eb432245f2.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="has-background-primary">
+    <header style="has-background-grey-lighter">
+        <h1 class="is-family-secondary">Bullet Journal</h1>
+        {{if loggedIn}}
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="/dashboard" class="navbar-item is-family-secondary">
+                        Home
+                    </a>
+                </div>
+                <div class="navbar-end">
+                    <a href="/" class="navbar-item is-family-secondary">
+                        Logout
+                    </a>
+                </div>
+            </div>
+        </nav>
+        {{/if}}
+    </header>
+
+    <main>
+        <div>
+            {{{body}}}
+        </div>
+    </main>
+
+    {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+    {{else}}
+    <script src="/js/login.js"></script>
+    {{/if}}
+
+</body>
+
+</html>
