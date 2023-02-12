@@ -19,9 +19,9 @@
 
 <body class="has-background-primary">
     <header style="has-background-grey-lighter">
-        <h1 class="is-family-secondary is-size-2-mobile is-size-1 has-text-centered m-3">Bullet Journal</h1>
+        <h1 class="is-family-secondary is-size-2-mobile is-size-1 has-text-centered has-background-grey-lighter py-3">Bullet Journal</h1>
         {{#if logged_in}}
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav class="navbar has-background-grey-lighter" role="navigation" aria-label="main navigation">
             <div class="navbar-menu">
                 <div class="navbar-start">
                     <a href="/dashboard" class="navbar-item is-family-secondary">
@@ -29,7 +29,7 @@
                     </a>
                 </div>
                 <div class="navbar-end">
-                    <a href="/" class="navbar-item is-family-secondary">
+                    <a href="/" class="navbar-item is-family-secondary" id="logout">
                         Logout
                     </a>
                 </div>
