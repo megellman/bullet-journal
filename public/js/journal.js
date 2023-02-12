@@ -1,11 +1,22 @@
 // Update journal
-const journalForm = async (e) => {
+const updateJournalForm = async (e) => {
     e.preventDefault();
 
     const title = document.querySelector('#title').value.trim();
     const description = document.querySelector('#description').value.trim();
 
-    if(title){
+    if(title && description){
+        const response = await fetch('/api/journal', {
+            method: 'POST',
+            body: JSON.stringify({title, description}),
+            headers: {'Content-Type': 'application/json'},
+        });
+        if(response.ok){
+            document.location.replace('/dashboard');
+        } else {
+            alert('Failed to update journal');
+        }
+    } else if (title){
         const response = await fetch('/api/journal', {
             method: 'POST',
             body: JSON.stringify({title}),
@@ -16,7 +27,7 @@ const journalForm = async (e) => {
         } else {
             alert('Failed to update journal');
         }
-    } else if (description){
+    }else if (description){
         const response = await fetch('/api/journal', {
             method: 'POST',
             body: JSON.stringify({description}),
@@ -30,4 +41,4 @@ const journalForm = async (e) => {
     }
 };
 
-document.querySelector('.journal-form').addEventListener('submit', journalForm);
+document.querySelector('.journal-form').addEventListener('submit', updateJournalForm);
