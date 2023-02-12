@@ -3,7 +3,7 @@ const { Entry } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // Create new entry
-router.post("/", async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
     try {
         const newEntry = await Entry.create({
             ...req.body,
@@ -19,7 +19,7 @@ router.post("/", async (req, res) => {
 
 
 // Update entry
-router.put("/:id", async (req, res) => {
+router.put("/:id", withAuth, async (req, res) => {
     try {
         const entryData = await Entry.update(req.body, {
             where: {
@@ -39,7 +39,7 @@ router.put("/:id", async (req, res) => {
 });
 
 // Delete Specific Entry
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", withAuth, async (req, res) => {
     try {
         const entryData = await Entry.destroy({
             where: {
