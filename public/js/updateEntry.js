@@ -4,9 +4,10 @@ const updateEntryForm = async (e) => {
 
     const title = document.querySelector('#title').value.trim();
     const content = document.querySelector('#content').value.trim();
+    const id = window.location.href.split('/').pop();
 
     if(title && content){
-        const response = await fetch(`/api/entry/:${id}`, {
+        const response = await fetch(`/api/entry/${id}`, {
             method: 'PUT',
             body: JSON.stringify({title, content}),
             headers: {'Content-Type': 'application/json'},
@@ -17,7 +18,7 @@ const updateEntryForm = async (e) => {
             alert('Failed to update entry');
         }
     } else if (title){
-        const response = await fetch(`/api/entry/:${id}`, {
+        const response = await fetch(`/api/entry/${id}`, {
             method: 'PUT',
             body: JSON.stringify({title}),
             headers: {'Content-Type': 'application/json'},
@@ -28,7 +29,7 @@ const updateEntryForm = async (e) => {
             alert('Failed to update entry');
         }
     }else if (content){
-        const response = await fetch(`/api/entry/:${id}`, {
+        const response = await fetch(`/api/entry/${id}`, {
             method: 'PUT',
             body: JSON.stringify({content}),
             headers: {'Content-Type': 'application/json'},
