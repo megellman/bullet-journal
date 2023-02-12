@@ -3,13 +3,11 @@ const { User } = require("../../models");
 
 router.post('/', async (req, res) => {
     try {
-      console.log('************start****************');
         const userData = await User.create({
           username: req.body.username,
           email: req.body.email,
           password: req.body.password,
         });
-        console.log('***********info saved*****************');
         req.session.save(() => {
           req.session.logged_in = true;
     
@@ -46,7 +44,7 @@ router.post('/login', async (req, res) => {
     res.status(200).redirect("/");
     
   });
-  
+  console.log(userData)
 } catch (err) {
   res.status(400).json(err);
 }

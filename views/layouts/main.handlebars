@@ -20,7 +20,7 @@
 <body class="has-background-primary">
     <header style="has-background-grey-lighter">
         <h1 class="is-family-secondary is-size-2-mobile is-size-1 has-text-centered m-3">Bullet Journal</h1>
-        {{#if loggedIn}}
+        {{#if logged_in}}
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-menu">
                 <div class="navbar-start">
@@ -44,7 +44,7 @@
         </div>
     </main>
 
-    {{#if loggedIn}}
+    {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{else}}
     <script src="/js/login.js"></script>
