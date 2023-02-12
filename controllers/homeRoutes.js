@@ -14,6 +14,11 @@ router.get('/', (req, res) => {
     res.render('login');
 });
 
+//Render dashboard
+router.get("/dashboard", withAuth, (req, res) => {
+    res.render("dashboard");
+});
+
 // All journals 
 router.get('/journals', async (req, res) => {
     try {
@@ -45,14 +50,30 @@ router.get("/journals/:id", withAuth, async (req, res) => {
             }
         });
         if (!journalData) {
-            res.status(404).json({message: "Journal not found"});
+            res.status(404).json({ message: "Journal not found" });
             return;
         }
         const journal = journalData.get({ plain: true });
-        res.status(200).render("journal", {
-            journal,
-            logged_in: req.session.logged_in
-        })
+        const entryData = await Entry.findAll({
+            where: {
+                journal_id: journal.id
+            }
+        });
+        if (entryData) {
+            const entries = entryData.map((entry) => entry.get({ plain: true }));
+
+            res.status(200).render("journal", {
+                journal,
+                entries,
+                logged_in: req.session.logged_in
+            });
+        } else {
+            res.status(200).render("journal", {
+                journal,
+                logged_in: req.session.logged_in
+            });
+        }
+
     } catch (error) {
         res.status(500).json(err);
     }
@@ -60,7 +81,7 @@ router.get("/journals/:id", withAuth, async (req, res) => {
 
 
 // All entries from specific journal
-router.get('/journals/:id/entries', async (req, res) => {
+router.get('/journals/:id/entries', withAuth, async (req, res) => {
     try {
         const entryData = await Entry.findAll({
             include: "title",
@@ -81,7 +102,7 @@ router.get('/journals/:id/entries', async (req, res) => {
 });
 
 // Specific entry from specific journal
-router.get('/journals/:id/entries/:entry_id', async (req, res) => {
+router.get('/journals/:id/entries/:entry_id', withAuth, async (req, res) => {
     try {
         const entryData = await Entry.findByPk(req.params.entry_id);
 
