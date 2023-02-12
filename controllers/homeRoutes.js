@@ -41,7 +41,7 @@ router.get('/journals', async (req, res) => {
     };
 });
 
-// Specific journal
+// Specific journal and its entries
 router.get("/journals/:id", withAuth, async (req, res) => {
     try {
         const journalData = await Journal.findOne({
@@ -79,28 +79,6 @@ router.get("/journals/:id", withAuth, async (req, res) => {
     }
 });
 
-
-// All entries from specific journal
-router.get('/journals/:id/entries', withAuth, async (req, res) => {
-    try {
-        const entryData = await Entry.findAll({
-            include: "title",
-            where: {
-                journal_id: req.params.id,
-            },
-        });
-
-        const entries = entryData.map((entry) => entry.get({ plain: true }));
-
-        res.render('entries', {
-            entries,
-            logged_in: req.session.logged_in,
-        });
-    } catch (err) {
-        res.status(500).json(err);
-    };
-});
-
 // Specific entry from specific journal
 router.get('/journals/:id/entries/:entry_id', withAuth, async (req, res) => {
     try {
@@ -108,7 +86,7 @@ router.get('/journals/:id/entries/:entry_id', withAuth, async (req, res) => {
 
         const entry = entryData.get({ plain: true });
 
-        res.render('entry-details', {
+        res.render('journal', {
             entry,
             logged_in: req.session.logged_in,
         });
