@@ -13,11 +13,6 @@ router.get('/', (req, res) => {
     res.render('login');
 });
 
-//Render dashboard
-// router.get("/dashboard", withAuth, (req, res) => {
-//     res.render("dashboard");
-// });
-
 // All journals 
 router.get('/dashboard', withAuth, async (req, res) => {
     try {
