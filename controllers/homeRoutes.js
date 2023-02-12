@@ -94,4 +94,14 @@ router.get('/journals/:id/entries/:entry_id', withAuth, async (req, res) => {
     };
 });
 
+// Render create journal form
+router.get("/create-journal", (req, res) => {
+    res.render("createJournal");
+});
+
+// Render create entry form
+router.get("/create-entry", (req, res) => {
+    res.render("createEntry");
+});
+
 module.exports = router;
