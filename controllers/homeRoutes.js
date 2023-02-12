@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { Journal, Entry } = require("../models");
+const withAuth = require("../utils/auth");
 
 // Login 
 router.get('/', (req, res) => {
@@ -35,6 +36,28 @@ router.get('/journals', async (req, res) => {
     };
 });
 
+// Specific journal
+router.get("/journals/:id", withAuth, async (req, res) => {
+    try {
+        const journalData = await Journal.findOne({
+            where: {
+                id: req.params.id
+            }
+        });
+        if (!journalData) {
+            res.status(404).json({message: "Journal not found"});
+            return;
+        }
+        const journal = journalData.get({ plain: true });
+        res.status(200).render("journal", {
+            journal,
+            logged_in: req.session.logged_in
+        })
+    } catch (error) {
+        res.status(500).json(err);
+    }
+});
+
 
 // All entries from specific journal
 router.get('/journals/:id/entries', async (req, res) => {
@@ -48,7 +71,7 @@ router.get('/journals/:id/entries', async (req, res) => {
 
         const entries = entryData.map((entry) => entry.get({ plain: true }));
 
-        res.render('journal', {
+        res.render('entries', {
             entries,
             logged_in: req.session.logged_in,
         });
