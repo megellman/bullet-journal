@@ -5,7 +5,6 @@ const withAuth = require("../utils/auth");
 // Login 
 router.get('/', (req, res) => {
     // If user has already logged in, then redirect to dashboard
-    console.log(`logged in is ${req.session.logged_in}`);
     if (req.session.logged_in) {
         res.redirect('/dashboard');
         return;
@@ -20,7 +19,7 @@ router.get("/dashboard", withAuth, (req, res) => {
 });
 
 // All journals 
-router.get('/journals', async (req, res) => {
+router.get('/dashboard', async (req, res) => {
     try {
         const journalData = await Journal.findAll({
             where: {
