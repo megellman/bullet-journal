@@ -1,4 +1,4 @@
-$(window).load(function () {
+$(document).load(function () {
     $('#tour').joyride({
         autoStart: true
     });

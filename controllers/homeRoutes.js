@@ -91,13 +91,17 @@ router.get('/journals/:id/entries/:entry_id', withAuth, async (req, res) => {
 });
 
 // Render create journal form
-router.get("/create-journal", (req, res) => {
-    res.render("createJournal");
+router.get("/create-journal", withAuth, (req, res) => {
+    res.render("createJournal", {
+        logged_in: req.session.logged_in
+    });
 });
 
 // Render create entry form
-router.get("/create-entry", (req, res) => {
-    res.render("createEntry");
+router.get("/create-entry", withAuth, (req, res) => {
+    res.render("createEntry", {
+        logged_in: req.session.logged_in
+    });
 });
 
 module.exports = router;
