@@ -77,10 +77,25 @@ html, body {
 }
 
 .title {
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 .journal-container {
     margin-left: 5%;
 }
 
+
+.icon-holder {
+    margin-left: 10%;
+}
+
+.update-holder {
+    height: 10%;
+    margin-top: -15px;
+    margin-right: -15px;
+}
+
+.update {
+    height: 20px;
+    width: 10px;
+}
