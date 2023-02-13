@@ -2,29 +2,47 @@
     <div class="column is-three-fifths">
         <form id="newJournal">
             <div class="field">
-                <label for="title" class="label">New Journal Title</label>
+                <label for="title" class="label">Journal Title</label>
                 <div class="control">
+                    {{#if create}}
                     <input id="title" class="input" type="text"
                         placeholder="Title" />
+                    {{/if}}
+                    {{#if update}}
+                    <input id="title" class="input" type="text" value="{{title}}" />
+                    {{/if}}
                 </div>
             </div>
 
             <div class="field">
-                <label for="description" class="label">New Journal
+                <label for="description" class="label">Journal
                     Description</label>
                 <div class="control">
+                    {{#if create}}
                     <textarea id="description" class="textarea is-large"
                         placeholder="A journal about..."></textarea>
+                    {{/if}}
+                    {{#if update}}
+                    <input id="description" class="textarea is-large" value="{{description}}" />
                 </div>
             </div>
 
             <div class="field">
                 <div class="control">
+                    {{#if create}}
                     <input type="submit" id="create-journal-button" class="button is-primary-dark is-outline" value="Create" />
+                    {{/if}}
+                    {{#if update}}
+                    <input type="submit" id="update-journal-button" class="button isprimary-dark is-outline" value="Submit" />
                 </div>
             </div>
         </form>
     </div>
 </div>
 
+{{#if create}}
 <script src="/js/createJournal.js"></script>
+{{/if}}
+{{#if update}}
+<script src="/js/updateJournal.js"></script>
+{{/if}}
