@@ -82,7 +82,7 @@ router.get('/journals/:journal_id/entries/:id', withAuth, async (req, res) => {
 
         const entry = entryData.get({ plain: true });
 
-        res.render('journal', {
+        res.render('entryDetails', {
             entry,
             logged_in: req.session.logged_in,
         });
