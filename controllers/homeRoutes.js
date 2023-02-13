@@ -13,11 +13,6 @@ router.get('/', (req, res) => {
     res.render('login');
 });
 
-//Render dashboard
-// router.get("/dashboard", withAuth, (req, res) => {
-//     res.render("dashboard");
-// });
-
 // All journals 
 router.get('/dashboard', withAuth, async (req, res) => {
     try {
@@ -93,6 +88,16 @@ router.get('/journals/:id/entries/:entry_id', withAuth, async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     };
+});
+
+// Render create journal form
+router.get("/create-journal", (req, res) => {
+    res.render("createJournal");
+});
+
+// Render create entry form
+router.get("/create-entry", (req, res) => {
+    res.render("createEntry");
 });
 
 module.exports = router;
