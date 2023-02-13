@@ -1,0 +1,51 @@
+<div class="columns is-centered is-mobile">
+    <div class="column is-three-fifths">
+        <form id="newEntry">
+            <div class="field">
+                <div class="control">
+                    {{#if create}}
+                    <input id="title" class="input" type="text"
+                        placeholder="Enter Title here" />
+                    {{/if}}
+                    {{#if update}}
+                    <input id="title" class="input" type="text" value="{{title}}" />
+                    {{/if}}
+                </div>
+            </div>
+
+            <div class="control">
+                {{#if create}}
+                <textarea id="content" class="textarea is-large"
+                    placeholder="Enter your thoughts here..."></textarea>
+                {{/if}}
+                {{#if update}}
+                <textarea id="content" class="textarea is-large" value="{{content}}" />
+                {{/if}}
+            </div>
+            <div class="field">
+                <label for="background-color">Choose a background color:</label>
+                <select name="background-color" id="background-color">
+                    <option value="green">green</option>
+                    <option value="red">red</option>
+                    <option value="blue">blue</option>
+                    <option value="pink">pink</option>
+                    <option value="purple">purple</option>
+                </select>
+            </div>
+        </form>
+
+        <div class="field">
+            <div class="control">
+                <input type="submit" id="create-entry-button"
+                    class="button is-primary-dark is-outline" value="Create" />
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#if create}}
+<script src="/js/createEntry.js"></script>
+{{/if}}
+{{#if update}}
+<script src="/js/updateEntry.js"></script>
+{{/if}}

@@ -1,0 +1,39 @@
+html, body {
+    min-height: 100%;
+    color: black;
+    font-family: 'Merriweather', serif;
+}
+
+.tan {
+    background-color: #e8e3e2;
+}
+.green {
+background-color: #5f8f7e;
+} 
+
+.red {
+    background-color: #cf6c71;
+}
+
+.blue {
+    background-color: #338894;
+}
+
+.pink {
+    background-color: #e46087
+}
+
+.purple {
+    background-color: #69579e;
+}
+
+.dotted {
+    background-image: url(../assets/little-dots.png);
+}
+
+.title {
+    font-family: 'Karla', sans-serif;
+}
+.body {
+    font-family: 'Merriweather', serif;
+}
