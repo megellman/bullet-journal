@@ -7,6 +7,7 @@ router.post('/', async (req, res) => {
         const journal = await Journal.create({
             title: req.body.title,
             description: req.body.description,
+            background: req.body.background,
             user_id: req.session.user_id,
         });
 
