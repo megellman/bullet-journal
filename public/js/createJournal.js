@@ -6,7 +6,7 @@ const journalForm = async (e) => {
     const background = document.querySelector('#background-color').value;
 
     if(title && description && background){
-        const response = await fetch('/api/journal', {
+        const response = await fetch('/api/journals', {
             method: 'POST',
             body: JSON.stringify({title, description, background}),
             headers: {'Content-Type': 'application/json'},

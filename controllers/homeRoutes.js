@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 // All journals 
 router.get('/dashboard', withAuth, async (req, res) => {
     try {
-        console.log("Logged in: " + req.session.user_id);
+        // console.log("Logged in: " + req.session.user_id);
         const journalData = await Journal.findAll({
             where: {
                 user_id: req.session.user_id,
