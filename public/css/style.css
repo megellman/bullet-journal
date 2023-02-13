@@ -34,12 +34,37 @@ html, body {
 .title {
     font-family: 'Karla', sans-serif;
 }
+
 .body {
     font-family: 'Merriweather', serif;
 }
 
-
 .journals {
     height: 400px;
+}
+
+/* .default-notebook {
+    background-image: url(../assets/images/comp-cover.jpg);
+} */
+
+.default-notebook {
+    background-image: url(../assets/images/green.png);
+    /* background-repeat: no-repeat; */
+}
+
+.blue-notebook {
+    background-image: url(../assets/images/blue.png);
+}
+
+.pink-notebook {
+    background-image: url(../assets/images/pink.png);
+}
+
+.purple-notebook {
+    background-image: url(../assets/images/purple.png);
+}
+
+.red-notebook {
+    background-image: url(../assets/images/red.png);
 }
 
