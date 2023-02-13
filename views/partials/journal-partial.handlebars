@@ -1,8 +1,26 @@
-<div class="column is-half-tablet is-one-third-desktop is-one-quarter-widescreen journal">
-    <div class="card">
-        <div class="card-content">
-            <p class="title"> Journal Title: {{title}}</p>
-            <p class="subtitle">Journal Description {{description}}</p>
+<div class="column is-half-tablet is-two-thirds-desktop is-one-quarter-widescreen">
+    <a href="/journals/{{id}}">
+        <div class="box journals has-text-centered">
+            <p class="title has-text-white mt-6">{{title}}</p>
+            <p class="is-size-7 mt-5 pt-5 has-text-weight-bold">{{description}}</p>
+
+            <div class="field buttons is-right mt-6 pt-6">
+                <p class="control">
+                    <button class="button is-primary is-light">
+                        <span class="icon is-small">
+                            <i class="fa-solid fa-pencil"></i>
+                        </span>
+                    </button>
+                </p>
+
+                <p class="control">
+                    <button class="button is-danger is-light">
+                        <span class="icon is-small">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </button>
+                </p>
+            </div>
         </div>
-    </div>
+    </a>
 </div>
