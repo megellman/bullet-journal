@@ -37,3 +37,12 @@ background-color: #5f8f7e;
 .body {
     font-family: 'Merriweather', serif;
 }
+
+
+.journals {
+    background-image: url(../assets/images/comp-cover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+

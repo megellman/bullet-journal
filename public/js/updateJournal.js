@@ -29,3 +29,5 @@ const updateJournalForm = async (e) => {
 
 document.querySelector('.journal-form').addEventListener('submit', updateJournalForm);
 document.querySelector('.journal-form').addEventListener('submit', updateJournalForm);
+document.querySelector('.journal-form').addEventListener('submit', updateJournalForm);
+document.querySelector('.journal-form').addEventListener('submit', updateJournalForm);
