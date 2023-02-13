@@ -8,7 +8,7 @@
                         placeholder="Enter Title here" />
                     {{/if}}
                     {{#if update}}
-                    <input id="title" class="input" type="text" value="{{title}}" />
+                    <input id="title" class="input" type="text" value="{{entry.title}}" />
                     {{/if}}
                 </div>
             </div>
@@ -18,7 +18,7 @@
                 <textarea id="content" class="textarea is-large" placeholder="Enter your thoughts here..."></textarea>
                 {{/if}}
                 {{#if update}}
-                <textarea id="content" class="textarea is-large" value="{{content}}" />
+                <textarea id="content" class="textarea is-large" />{{entry.content}}</textarea>
                 {{/if}}
             </div>
             <div class="field mt-4">

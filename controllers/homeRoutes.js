@@ -101,12 +101,14 @@ router.get("/create-journal", withAuth, async (req, res) => {
         create = false;
         update = true;
         const journalData = await Journal.findByPk(req.params.id);
+        console.log(journalData);
         journal = journalData.get({ plain: true });
+        // console.log(journal);
     } else {
         create = true;
         update = false;
     }
-
+    // console.log(journal.title, journal.description);
     res.render("createJournal", {
         logged_in: req.session.logged_in,
         create,
