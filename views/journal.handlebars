@@ -2,15 +2,14 @@
     <h2 class="p-3 is-family-secondary is-size-3 has-text-centered m-4">
         {{title}}</h2>
     <section class="columns is-centered justify-content-center">
-        <div
-            class="column justify-content-center has-background-grey-lighter p-2">
+        <div class="column justify-content-center p-2">
             {{#unless entries}}
             <p class="has-text-centered is-size-5 is-family-secondary">This
                 journal has no entries! Would you like to create one?</p>
             {{/unless}}
 
             <button id="create-entry-button"
-                class="button is-primary is-outlined my-3">Create New
+                class="tan button is-outlined my-3">Create New
                 Entry</button>
 
             {{#if entries}}
