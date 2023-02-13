@@ -9,7 +9,7 @@
                         placeholder="Title" />
                     {{/if}}
                     {{#if update}}
-                    <input id="title" class="input" type="text" value="{{title}}" />
+                    <input id="title" class="input" type="text" value="{{journal.title}}" />
                     {{/if}}
                 </div>
             </div>
@@ -23,7 +23,7 @@
                         placeholder="A journal about..."></textarea>
                     {{/if}}
                     {{#if update}}
-                    <input id="description" class="textarea is-large" value="{{description}}" />
+                    <textarea id="description" class="textarea is-large" >{{journal.description}}</textarea>
                 </div>
             </div>
 

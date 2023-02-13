@@ -6,7 +6,7 @@ $(document).load(function () {
   
 const createJournalButton = document.getElementById("create-journal");
 
-async function handleCreateJournalButton (event) {
+function handleCreateJournalButton (event) {
     event.preventDefault();
 
     document.location.replace("/create-journal");
