@@ -5,7 +5,8 @@ const entryForm = async (e) => {
     const content = document.querySelector('#content').value.trim();
     const background = document.querySelector('#background-color').value;
 
-    if(title && content){
+
+    if(title && content && background){
         const response = await fetch('/api/entry', {
             method: 'POST',
             body: JSON.stringify({title, content, background}),

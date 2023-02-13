@@ -31,21 +31,21 @@
             <div class="field">
                 <div class="control">
                     {{#if create}}
-                    <input type="submit" id="create-journal-button" class="button is-primary-dark is-outline" value="Create" />
+                    <input type="submit" id="create-journal-button" class="button green is-outline" value="Create" />
                     {{/if}}
                     {{#if update}}
-                    <input type="submit" id="update-journal-button" class="button isprimary-dark is-outline" value="Submit" />
+                    <input type="submit" id="update-journal-button" class="button green is-outline" value="Submit" />
                     {{/if}}
                 </div>
             </div>
             <div class="field">
             <label for="background-color">Choose a background color:</label>
             <select name="background-color" id="background-color">
-                <option value="green">green</option>
-                <option value="red">red</option>
-                <option value="blue">blue</option>
-                <option value="pink">pink</option>
-                <option value="purple">purple</option>
+                <option value="default-notebook">green</option>
+                <option value="red-notebook">red</option>
+                <option value="blue-notebook">blue</option>
+                <option value="pink-notebook">pink</option>
+                <option value="purple-notebook">purple</option>
             </select>
             </div>
         </form>

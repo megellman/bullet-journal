@@ -5,7 +5,7 @@
             <h2 class="p-3 is-family-secondary is-size-3  has-text-black has-border-color-black is-rounded">Select a Journal</h2>
         </div>
         <div class="column is-one-third-tablet is-one-quarter-desktop my-3">
-            <button id="create-journal" class="button is-black is-outlined">
+            <button id="create-journal" class="button green is-outlined">
                 <span class="is-hidden-tablet">
                     <i class="fa-solid fa-plus is-size-3 is-black"></i>
                 </span>
@@ -14,7 +14,7 @@
         </div>
     </div>
 
-    <div class="columns is-centered my-3">
+    <div class="columns is-multiline is-centered journal-container">
         {{#each journals}}
         {{>journal-partial}}
         {{/each}}
@@ -23,7 +23,7 @@
     {{else}}
     <div class="hero is-halfheight">
         <div class="hero-body justify-content-center">
-            <button id="create-journal" class="button is-black is-outlined">
+            <button id="create-journal" class="button is-outlined">
                 <span class="is-hidden-mobile is-size-3 has-text-black">Create New Journal</span>
             </button>
         </div>
