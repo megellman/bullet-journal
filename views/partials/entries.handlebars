@@ -4,10 +4,21 @@
             <a href="journals/{{id}}/entries/{{id}}">
                 <p class="title">
                     {{title}}
-                    <span class="icon is-small"> 
-                        <i data-id="{{id}}" class="fa-solid fa-pencil"></i>
-                        <i data-id="{{id}}" class="fa-solid fa-trash-can"></i>
-                    </span>
+                    
+                    <div class="buttons is-right"> 
+                        <button class="button">
+                            <span class="icon is-small">
+                                <i data-id="{{id}}" class="fa-solid fa-pencil"></i>
+                            </span>
+                        </button>
+
+                        <button class="button">
+                            <span class="icon is-small">
+                                <i data-id="{{id}}" class="fa-solid fa-trash-can"></i>
+                            </span>
+                        </button>
+                    </div>
+                
                 </p>
             </a>
         </div>

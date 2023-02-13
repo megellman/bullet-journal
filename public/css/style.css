@@ -44,9 +44,10 @@ html, body {
 }
 
 .journals {
-    background-image: url(../assets/images/comp-cover.jpg);
+    /* background-image: url(../assets/images/comp-cover.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: -3; */
     height: 400px;
 }
 
