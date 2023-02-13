@@ -8,7 +8,9 @@ router.post('/', async (req, res) => {
           email: req.body.email,
           password: req.body.password,
         });
+        const {id} = userData.get({ plain: true});
         req.session.save(() => {
+          req.session.user_id = id;
           req.session.logged_in = true;
           req.session.user_id = userData.id;
           res.status(204).json(userData);
