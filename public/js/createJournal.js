@@ -18,4 +18,4 @@ const journalForm = async (e) => {
     }
 };
 
-document.querySelector('.journal-form').addEventListener('submit', journalForm);
+document.querySelector('#create-journal').addEventListener('submit', journalForm);

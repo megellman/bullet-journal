@@ -1,39 +1,43 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-.primary {
-background-color: rgb(148, 159, 199);
-color: black;
-}
-
-.secondary {
-    background-color:rgb(115, 120, 139);
-    color: white;
-    border: solid rgb(152, 165, 215);
-}
-
-.secondary:hover {
-    color: white;
-}
-
-.tertiary {
-    background-color: #D6AB9F;
-    border: solid 2px rgb(112, 122, 162);
-}
-
-.input {
-    /* border: solid 2px #D6AB9F; */
-    border: solid 2px rgb(112, 122, 162);
-}
-
-html {
-    background-image: url(../assets/paper.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    margin:0 auto;
-}
-
 html, body {
     min-height: 100%;
+    color: black;
+    font-family: 'Merriweather', serif;
+}
+html {
+    /* background-image: url(../assets/dots.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin:0 auto; */
+    background-color: #e8e3e2;
+}
+
+.green {
+background-color: #5f8f7e;
+} 
+
+.red {
+    background-color: #cf6c71;
+}
+
+.blue {
+    background-color: #338894;
+}
+
+.pink {
+    background-color: #e46087
+}
+
+.pink-light {
+    background-color: #ffcdce;
+}
+
+.dotted {
+    background-image: url(../assets/little-dots.png);
+}
+
+.title {
+    font-family: 'Karla', sans-serif;
+}
+.body{
+    font-family: 'Merriweather', serif;
 }
