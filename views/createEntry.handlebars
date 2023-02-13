@@ -3,16 +3,39 @@
         <form id="newEntry">
             <div class="field">
                 <div class="control">
-                    <input id="title" class="input" type="text" placeholder="Enter Title here">
+                    {{#if create}}
+                    <input id="title" class="input" type="text"
+                        placeholder="Enter Title here" />
+                    {{/if}}
+                    {{#if update}}
+                    <input id="title" class="input" type="text" value="{{title}}" />
+                    {{/if}}
                 </div>
             </div>
 
             <div class="control">
-                <textarea id="content" class="textarea is-large" placeholder="Enter your thoughts here..."></textarea>
+                {{#if create}}
+                <textarea id="content" class="textarea is-large"
+                    placeholder="Enter your thoughts here..."></textarea>
+                {{/if}}
+                {{#if update}}
+                <textarea id="content" class="textarea is-large" value="{{content}}" />
+                {{/if}}
             </div>
         </form>
 
+        <div class="field">
+            <div class="control">
+                <input type="submit" id="create-entry-button"
+                    class="button is-primary-dark is-outline" value="Create" />
+            </div>
+        </div>
     </div>
 </div>
 
-<script src="/public/js/createEntry.js"></script>
+{{#if create}}
+<script src="/js/createEntry.js"></script>
+{{/if}}
+{{#if update}}
+<script src="/js/updateEntry.js"></script>
+{{/if}}
