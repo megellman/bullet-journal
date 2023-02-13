@@ -2,14 +2,19 @@
     {{#if journals}}
     <div class="columns is-centered my-4">
         <div class="column is-two-thirds-tablet is-three-quarters-desktop my-3">
-            <h2 class="p-3 is-family-secondary is-size-3 has-background-primary-light has-text-primary-dark has-border-color-primary-dark is-rounded">Select a Journal</h2>
+            <h2
+                class="p-3 is-family-secondary is-size-3 has-background-primary-light has-text-primary-dark has-border-color-primary-dark is-rounded">
+                Select a Journal</h2>
         </div>
         <div class="column is-one-third-tablet is-one-quarter-desktop my-3">
-            <button id="create-journal" class="button is-primary-dark is-outlined has-background-primary-light">
+            <button id="create-journal"
+                class="button is-primary-dark is-outlined has-background-primary-light">
                 <span class="is-hidden-tablet">
                     <i class="fa-solid fa-plus is-size-3 is-primary-dark"></i>
                 </span>
-                <span class="is-hidden-mobile is-size-3 has-text-primary-dark">Create New Journal</span>
+                <span
+                    class="is-hidden-mobile is-size-3 has-text-primary-dark">Create
+                    New Journal</span>
             </button>
         </div>
     </div>
@@ -23,8 +28,11 @@
     {{else}}
     <div class="hero is-primary is-halfheight is-centered">
         <div class="hero-body justify-content-center">
-            <button id="create-journal" class="button is-primary-dark is-outlined has-background-primary-light">
-                <span class="is-hidden-mobile is-size-3 has-text-primary-dark">Create New Journal</span>
+            <button id="create-journal"
+                class="button is-primary-dark is-outlined has-background-primary-light">
+                <span
+                    class="is-hidden-mobile is-size-3 has-text-primary-dark">Create
+                    New Journal</span>
             </button>
         </div>
     </div>
@@ -35,3 +43,28 @@
 {{#if journals}}
 <script src="/js/journal.js"></script>
 {{/if}}
+
+<ol data-joyride data-autostart="true" id="tour">
+    <li data-button="#Start Tour">Welcome to Bullet Journal! Let's get started.
+        Click the "Start Tour" button to take a guided tour of the site.</li>
+
+    <li data-id="#create-journal">The first step is to create your first journal.
+        You can have as many separate journals as you'd like.</li>
+
+    <li data-id="#newJournal">Enter a title and description for your new journal.
+        Then click the "Create" button or press <span
+            style="font-style: italic">Enter</span>.</li>
+
+    <li data-class=".journal">Click on a journal to view its entries.
+        Alternatively, click the <i class="fa-solid fa-pencil"></i></i> or <i
+            class="fa-regular fa-trash-can"></i> icons to edit a journal's title
+        or description or delete the journal.</li>
+
+    <li data-id="#create-entry-button">Now that you've created a journal, you can
+        create entries in that journal by clicking the "Create New Entry"
+        button.</li>
+
+    <li data-id="#newEntry">Enter a title for your entry, then enter your
+        content. When you're done, click the "Create" button or click <span
+            style="font-style: italic">Enter</span>.</li>
+</ol>

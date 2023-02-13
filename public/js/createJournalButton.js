@@ -1,3 +1,9 @@
+$(window).load(function () {
+    $('#tour').joyride({
+        autoStart: true
+    });
+  });
+  
 const createJournalButton = document.getElementById("create-journal");
 
 async function handleCreateJournalButton (event) {
@@ -6,4 +12,4 @@ async function handleCreateJournalButton (event) {
     document.location.replace("/create-journal");
 }
 
-createButton.addEventListener("click", handleCreateEntryButton);
+createJournalButton.addEventListener("click", handleCreateJournalButton);
