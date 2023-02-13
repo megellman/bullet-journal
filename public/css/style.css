@@ -37,3 +37,10 @@ html {
 html, body {
     min-height: 100%;
 }
+
+.journals {
+    background-image: url(../assets/images/comp-cover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+}
