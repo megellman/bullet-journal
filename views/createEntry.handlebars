@@ -1,6 +1,6 @@
 <div class="columns is-centered is-mobile">
     <div class="column is-three-fifths">
-        <form id="newEntry">
+        <form id="newEntry" class="mt-6 pt-6">
             <div class="field">
                 <div class="control">
                     {{#if create}}
@@ -15,19 +15,28 @@
 
             <div class="control">
                 {{#if create}}
-                <textarea id="content" class="textarea is-large"
-                    placeholder="Enter your thoughts here..."></textarea>
+                <textarea id="content" class="textarea is-large" placeholder="Enter your thoughts here..."></textarea>
                 {{/if}}
                 {{#if update}}
                 <textarea id="content" class="textarea is-large" />{{entry.content}}</textarea>
                 {{/if}}
             </div>
+            <div class="field mt-4">
+                <label for="background-color">Choose a background color:</label>
+                <select name="background-color" id="background-color">
+                    <option value="green">green</option>
+                    <option value="red">red</option>
+                    <option value="blue">blue</option>
+                    <option value="pink">pink</option>
+                    <option value="purple">purple</option>
+                </select>
+            </div>
         </form>
 
-        <div class="field">
+        <div class="field mt-4">
             <div class="control">
                 <input type="submit" id="create-entry-button"
-                    class="button is-primary-dark is-outline" value="Create" />
+                    class="button is-primary is-dark is-outline" value="Create" />
             </div>
         </div>
     </div>

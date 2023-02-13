@@ -33,7 +33,11 @@ Entry.init (
                 notEmpty: true,
             },
         },
-
+        background: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            defaultValue: "green",
+        },
         journal_id: {
             type: DataTypes.INTEGER,
             references: {
