@@ -24,6 +24,11 @@ Journal.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        background: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            defaultValue: "green",
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {

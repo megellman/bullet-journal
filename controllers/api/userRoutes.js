@@ -12,8 +12,8 @@ router.post('/', async (req, res) => {
         req.session.save(() => {
           req.session.user_id = id;
           req.session.logged_in = true;
-    
-          res.status(200).redirect("/");
+          req.session.user_id = userData.id;
+          res.status(204).json(userData);
         });
       } catch (err) {
         console.log(err);

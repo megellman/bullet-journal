@@ -3,11 +3,12 @@ const entryForm = async (e) => {
 
     const title = document.querySelector('#title').value.trim();
     const content = document.querySelector('#content').value.trim();
+    const background = document.querySelector('#background-color').value;
 
     if(title && content){
         const response = await fetch('/api/entry', {
             method: 'POST',
-            body: JSON.stringify({title, content}),
+            body: JSON.stringify({title, content, background}),
             headers: {'Content-Type': 'application/json'},
         });
         if(response.ok){
