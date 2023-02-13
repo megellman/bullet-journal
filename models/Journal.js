@@ -27,7 +27,7 @@ Journal.init(
         background: {
             type: DataTypes.STRING,
             allowNull: false,
-            defaultValue: "bg-pink-light",
+            defaultValue: "green",
         },
         user_id: {
             type: DataTypes.INTEGER,

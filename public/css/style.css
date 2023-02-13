@@ -3,14 +3,10 @@ html, body {
     color: black;
     font-family: 'Merriweather', serif;
 }
-html {
-    /* background-image: url(../assets/dots.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    margin:0 auto; */
+
+.tan {
     background-color: #e8e3e2;
 }
-
 .green {
 background-color: #5f8f7e;
 } 
@@ -27,8 +23,8 @@ background-color: #5f8f7e;
     background-color: #e46087
 }
 
-.pink-light {
-    background-color: #ffcdce;
+.purple {
+    background-color: #69579e;
 }
 
 .dotted {
@@ -38,6 +34,6 @@ background-color: #5f8f7e;
 .title {
     font-family: 'Karla', sans-serif;
 }
-.body{
+.body {
     font-family: 'Merriweather', serif;
 }
