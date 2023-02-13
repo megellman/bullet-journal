@@ -14,7 +14,7 @@ const updateJournalForm = async (e) => {
     updates.push(id);
 
     if(updates){
-        const response = await fetch(`/api/journal/${id}`, {
+        const response = await fetch(`/api/journals/${id}`, {
             method: 'PUT',
             body: JSON.stringify({updates}),
             headers: {'Content-Type': 'application/json'},
@@ -27,5 +27,7 @@ const updateJournalForm = async (e) => {
     } 
 };
 
+document.querySelector('.journal-form').addEventListener('submit', updateJournalForm);
+document.querySelector('.journal-form').addEventListener('submit', updateJournalForm);
 document.querySelector('.journal-form').addEventListener('submit', updateJournalForm);
 document.querySelector('.journal-form').addEventListener('submit', updateJournalForm);

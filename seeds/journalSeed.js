@@ -16,6 +16,12 @@ const journalData = [
     },
     {
         "title": "Travel",
+        "date": 2016-10-02,
+        "description": "Everywhere I've been",
+        "user_id": 2,
+    },
+    {
+        "title": "Travel",
         "date": 2020-03-11,
         "description": "Memories from all over the world",
         "user_id": 3,

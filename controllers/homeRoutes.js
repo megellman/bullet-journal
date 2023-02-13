@@ -76,9 +76,9 @@ router.get("/journals/:id", withAuth, async (req, res) => {
 });
 
 // Specific entry from specific journal
-router.get('/journals/:id/entries/:entry_id', withAuth, async (req, res) => {
+router.get('/journals/:journal_id/entries/:id', withAuth, async (req, res) => {
     try {
-        const entryData = await Entry.findByPk(req.params.entry_id);
+        const entryData = await Entry.findByPk(req.params.id);
 
         const entry = entryData.get({ plain: true });
 

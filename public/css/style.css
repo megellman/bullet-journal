@@ -31,7 +31,6 @@ background-color: #5f8f7e;
     background-image: url(../assets/little-dots.png);
 }
 
-
 .title {
     font-family: 'Karla', sans-serif;
 }
@@ -39,9 +38,6 @@ background-color: #5f8f7e;
     font-family: 'Merriweather', serif;
 }
 
-html, body {
-    min-height: 100%;
-}
 
 .journals {
     background-image: url(../assets/images/comp-cover.jpg);
