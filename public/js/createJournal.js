@@ -5,7 +5,7 @@ const journalForm = async (e) => {
     const description = document.querySelector('#description').value.trim();
 
     if(title && description){
-        const response = await fetch('/api/journal', {
+        const response = await fetch('/api/journals', {
             method: 'POST',
             body: JSON.stringify({title, description}),
             headers: {'Content-Type': 'application/json'},
@@ -18,4 +18,4 @@ const journalForm = async (e) => {
     }
 };
 
-document.querySelector('.journal-form').addEventListener('submit', journalForm);
+document.getElementById("newJournal").addEventListener('submit', journalForm);

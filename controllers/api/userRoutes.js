@@ -8,10 +8,12 @@ router.post('/', async (req, res) => {
           email: req.body.email,
           password: req.body.password,
         });
+        const {id} = userData.get({ plain: true});
         req.session.save(() => {
+          req.session.user_id = id;
           req.session.logged_in = true;
     
-          res.status(200).json(userData);
+          res.status(200).redirect("/");
         });
       } catch (err) {
         console.log(err);
