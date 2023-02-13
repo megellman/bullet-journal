@@ -31,16 +31,17 @@ html, body {
     background-image: url(../assets/little-dots.png);
 }
 
-.title {
+.title-text {
     font-family: 'Karla', sans-serif;
 }
 
-.body {
+.body-text {
     font-family: 'Merriweather', serif;
 }
 
 .journals {
     height: 400px;
+    width: 306px;
 }
 
 /* .default-notebook {
@@ -49,7 +50,7 @@ html, body {
 
 .default-notebook {
     background-image: url(../assets/images/green.png);
-    /* background-repeat: no-repeat; */
+
 }
 
 .blue-notebook {
@@ -66,5 +67,16 @@ html, body {
 
 .red-notebook {
     background-image: url(../assets/images/red.png);
+}
+
+.subtitle {
+    width: 200px;
+    text-align: center;
+    padding-left: 87px;
+    font-size: 1em;
+}
+
+.title {
+    font-size: 2em;
 }
 
