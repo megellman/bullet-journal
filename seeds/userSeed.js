@@ -27,8 +27,12 @@ const userdata = [
         username: "RonWeasley",
         email: "someone@yahoo.com",
         password: "aaaaaaaa"
+    },
+    {
+        username: "megan",
+        email: "megan@megan.megan",
+        password: "megan123"
     }
-
 ];
 
 const seedUser = async () => await User.bulkCreate(userdata, {
