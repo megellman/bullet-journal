@@ -113,6 +113,10 @@ html, body {
     margin-right: auto;
 }
 
+#entryDetailColumn {
+    margin-top: 4.25rem;
+}
+
 @media screen  and (max-width: 768px) {
     .journal-container {
         margin-left: auto;
