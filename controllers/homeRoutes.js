@@ -82,10 +82,20 @@ router.get('/journals/:journal_id/entries/:id', withAuth, async (req, res) => {
 
         const entry = entryData.get({ plain: true });
 
+        const entriesData = await Entry.findAll({
+            where: {
+                journal_id: req.params.journal_id
+            }
+        });
+        if (entriesData) {
+            const entries = entriesData.map((entry) => entry.get({ plain: true }));
+
         res.render('journal', {
             entry,
+            entries,
             logged_in: req.session.logged_in,
         });
+    }
     } catch (err) {
         res.status(500).json(err);
     };

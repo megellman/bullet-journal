@@ -1,24 +1,27 @@
 <div class="column  is-half-tablet is-one-quarter-widescreen">
-    <a href="/journals/{{id}}">
-        <div class="box journals {{background}} has-text-centered">
-            <div class="update-holder field buttons is-right">
+
+      <div class="update-holder field buttons is-right">
                 <p class="control">
-                    <button class="button update journal-form">
+                    <button class="button update journal-form is-info is-light">
                         <span class="icon is-small">
                             <i data-id="{{id}}" class="fa-solid fa-pencil"></i>
                         </span>
                     </button>
                 </p>
                 <p class="control">
-                    <button class="button update ">
+                    <button class="button update deleteJournalButton is-danger is-light">
                         <span class="icon is-small">
                             <i data-id="{{id}}" class="fa-solid fa-trash-can"></i>
                         </span>
                     </button>
                 </p>
             </div>
+
+    <a href="/journals/{{id}}">
+        <div class="box journals {{background}} has-text-centered">
+          
             <p class="title has-text-white ml-5">{{title}}</p>
-            <p class="subtitle mt-5 pt-3 has-text-weight-bold">{{description}}</p>
+            <p class="subtitle mt-6 pt-5 has-text-weight-bold">{{description}}</p>
 
         </div>
     </a>
