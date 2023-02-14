@@ -20,4 +20,4 @@ const entryForm = async (e) => {
     }
 };
 
-document.querySelector('.entry-form').addEventListener('submit', entryForm);
+document.querySelector('#newEntry').addEventListener('submit', entryForm);
