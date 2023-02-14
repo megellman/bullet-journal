@@ -1,30 +1,12 @@
-<div class="columns">
-    <div class="column">
-        <div class="box {{background}}">
-            {{log background}}
-            <a href="/journals/{{journal_id}}/entries/{{id}}">
-                <p class="title {{background}}-title has-text-white">
-                    {{title}}
-                    
-                    <div class="buttons is-right"> 
-                        <button class="button">
-                            <span class="icon is-small">
-                                <i data-id="{{id}}" class="fa-solid fa-pencil"></i>
-                            </span>
-                        </button>
-
-                        <button class="button">
-                            <span class="icon is-small">
-                                <i data-id="{{id}}" class="fa-solid fa-trash-can"></i>
-                            </span>
-                        </button>
-                    </div>
-                
-                </p>
-            </a>
-        </div>
+<div class="columns is-centered">
+  <div class="column is-three-fifths">
+    <div class="box {{background}}">
+      {{log background}}
+      <a href="/journals/{{journal_id}}/entries/{{id}}">
+        <p class="title {{background}}-title has-text-white">
+          {{title}}
+        </p>
+      </a>
     </div>
-</div>
-<div>
-    
+  </div>
 </div>

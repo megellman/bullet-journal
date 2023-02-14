@@ -8,7 +8,6 @@ router.post("/", withAuth, async (req, res) => {
         const newEntry = await Entry.create({
             ...req.body,
             journal_id: req.session.journal_id,
-            user_id: req.session.user_id
         });
 
         res.status(200).json(newEntry);
@@ -44,8 +43,6 @@ router.delete("/:id", withAuth, async (req, res) => {
         const entryData = await Entry.destroy({
             where: {
                 id: req.params.id,
-                journal_id: req.session.journal_id,
-                user_id: req.session.user_id  
             }
         });
 
@@ -57,6 +54,7 @@ router.delete("/:id", withAuth, async (req, res) => {
         res.status(200).json(entryData);
     } catch (err) {
         res.status(500).json(err);
+        console.log(err);
     }
 });
 
