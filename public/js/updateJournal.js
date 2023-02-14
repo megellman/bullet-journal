@@ -32,6 +32,8 @@ document.querySelector('.journal-form').addEventListener('submit', updateJournal
 // Delete Journal
 const deleteJournalButton = async (event) => {
 
+    event.stopPropagation();
+
     if (event.target.hasAttribute('data-id')) {
         const id = event.target.getAttribute('data-id');
 

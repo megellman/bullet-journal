@@ -2,6 +2,10 @@
 const updateEntryButton = async (event) => {
     event.preventDefault();
 
+    // From TOC
+    document.location.replace('/');
+
+    // From entry details
     document.location.replace('/');
 };
 
