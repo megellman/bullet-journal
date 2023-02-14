@@ -46,7 +46,6 @@ Entry.init (
             },
         },
     },
-
     {
         sequelize,
         timestamps: false,
