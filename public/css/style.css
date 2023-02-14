@@ -4,32 +4,36 @@ html, body {
     font-family: 'Merriweather', serif;
 }
 
-.tan {
-    background-color: #e8e3e2;
-}
 .green {
     background-color: #5f8f7e;
+    font-family: 'Orelega One', cursive;
+    font-family: 'Montserrat', sans-serif;
 } 
 
 .red {
     background-color: #cf6c71;
+    font-family: 'Tenor Sans', sans-serif;
+    font-family: 'Archivo Narrow', sans-serif;
 }
 
 .blue {
     background-color: #338894;
+    font-family: 'Forum', cursive;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .pink {
     background-color: #e46087;
+    font-family: 'Della Respira', serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .purple {
     background-color: #69579e;
+    font-family: 'DM Serif Display', serif;
+font-family: 'Red Hat Display', sans-serif;
 }
 
-.dotted {
-    background-image: url(../assets/little-dots.png);
-}
 
 .title-text {
     font-family: 'Karla', sans-serif;
@@ -50,23 +54,28 @@ html, body {
 
 .default-notebook {
     background-image: url(../assets/images/green.png);
+    font-family: 'Orelega One', cursive;
 
 }
 
 .blue-notebook {
     background-image: url(../assets/images/blue.png);
+    font-family: 'Forum', cursive;
 }
 
 .pink-notebook {
     background-image: url(../assets/images/pink.png);
+    font-family: 'Della Respira', serif;
 }
 
 .purple-notebook {
     background-image: url(../assets/images/purple.png);
+    font-family: 'DM Serif Display', serif;
 }
 
 .red-notebook {
     background-image: url(../assets/images/red.png);
+    font-family: 'Tenor Sans', sans-serif;
 }
 
 .subtitle {
@@ -98,4 +107,12 @@ html, body {
 .update {
     height: 20px;
     width: 10px;
+}
+
+.journal-title {
+    background-color: #ffffffcb;
+    border-radius: 10px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
