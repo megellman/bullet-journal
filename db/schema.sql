@@ -1,3 +1,4 @@
+-- Active: 1675100044962@@127.0.0.1@3306
 DROP DATABASE IF EXISTS journal_db;
 
 CREATE DATABASE journal_db;
