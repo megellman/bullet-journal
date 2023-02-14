@@ -1,15 +1,12 @@
-// //Update Already created entry
-// const updateEntryButton = async (event) => {
-//     event.preventDefault();
+//Update Already created entry
+const updateEntryButton = async (event, journal_id, id) => {
+    event.preventDefault();
 
-//     // From TOC
-//     document.location.replace('/');
+    // From entry details
+    document.location.replace("/journals/:journal_id/entries/:id/update-entry");
+};
 
-//     // From entry details
-//     document.location.replace('/');
-// };
-
-// document.querySelector('.updateEntryButton').addEventListener('click', updateEntryButton);
+document.querySelector('.updateEntryButton').addEventListener('click', updateEntryButton);
 
 
 // Delete Entry Button
