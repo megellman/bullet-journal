@@ -1,6 +1,8 @@
 <section class="block">
     <h2 class="p-3 is-family-secondary is-size-3 has-text-centered m-4">
-        {{journal.title}}</h2>
+        {{journal_title}}</h2>
+        <p class="is-italic has-text-right" id="quote-content"></p>
+        <p class="has-text-right" id="quote-author"></p>
     <section class="columns is-centered justify-content-center">
         <div class="column justify-content-center p-2">
             {{#unless entries}}
@@ -25,7 +27,7 @@
         {{/if}}
     </section>
 </section>
-
+<script src="/js/quotes.js"></script>
 <script src="/js/createEntryButton.js"></script>
 {{#if entry}}
 <script src="/js/entries.js"></script>
