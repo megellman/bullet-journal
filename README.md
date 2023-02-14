@@ -1,15 +1,16 @@
 # bullet-journal
 ## Table of Contents
-- [Table of Contents](#table-of-contents)
-- [Technology Used](#technology-used)
-- [Description](#description)
-- [Usage](#usage)
-- [Learning Points](#learning-points)
-- [Author Info](#author-info)
-  - [Ryan Moscoe](#ryan-moscoe)
-  - [Megan Ellman](#megan-ellman)
-  - [Solomon Santos](#solomon-santos)
-- [License](#license)
+- [bullet-journal](#bullet-journal)
+  - [Table of Contents](#table-of-contents)
+  - [Technology Used](#technology-used)
+  - [Description](#description)
+  - [Usage](#usage)
+  - [Learning Points](#learning-points)
+  - [Author Info](#author-info)
+    - [Ryan Moscoe](#ryan-moscoe)
+    - [Megan Ellman](#megan-ellman)
+    - [Solomon Santos](#solomon-santos)
+  - [License](#license)
 
 <br />
 
@@ -102,6 +103,9 @@ After you create at least one entry, your Journal page shows a list of entries. 
 <br />
 
 ### Solomon Santos
+- [LinkedIn](https://www.linkedin.com/in/solomon-santos)
+- [GitHub](https://www.github.com/captaiiinsolo)
+- [Twitter](https://twitter.com/captaiiinsolo)
 
 
 <br />
