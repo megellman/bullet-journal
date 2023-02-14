@@ -1,29 +1,12 @@
 <div class="columns is-centered">
-    <div class="column is-two-thirds">
-        <div class="box {{background}}">
-            {{log background}}
-            <a href="/journals/{{journal_id}}/entries/{{id}}">
-                <p class="title {{background}}-title has-text-white">
-                    {{title}}
-                </p>
-            </a>
-
-             <div class="buttons is-right"> 
-                <button class="button is-info is-light updateEntryButton">
-                    <span class="icon is-small">
-                        <i data-id="{{id}}" class="fa-solid fa-pencil"></i>
-                    </span>
-                </button>
-
-                <button class="button is-danger is-light deleteEntryButton">
-                    <span class="icon is-small">
-                        <i data-id="{{id}}" class="fa-solid fa-trash-can"></i>
-                    </span>
-                </button>
-            </div>
-        </div>
+  <div class="column is-two-thirds">
+    <div class="box {{background}}">
+      {{log background}}
+      <a href="/journals/{{journal_id}}/entries/{{id}}">
+        <p class="title {{background}}-title has-text-white">
+          {{title}}
+        </p>
+      </a>
     </div>
-</div>
-<div>
-    
+  </div>
 </div>
