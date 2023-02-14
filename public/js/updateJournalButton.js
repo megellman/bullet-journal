@@ -4,13 +4,15 @@ const updateJournalButton = async (event) => {
     event.stopPropagation();
   
     if (event.target.hasAttribute("data-id")) {
-      document.location.replace("/create-journal");
+      const id = event.target.getAttribute("data-id");
+      document.location.replace(`journals/${id}/update-journal`);
     }
   };
   
-  document
-    .querySelector(".updateJournalButton")
-    .addEventListener("click", updateJournalButton);
+  let updateJournalButtons = document.querySelectorAll(".updateJournalButton");
+  for (let i = 0; i < updateJournalButtons.length; i++) {
+    updateJournalButtons[i].addEventListener("click", updateJournalButton);
+  }
   
   // Delete Journal
   const deleteJournalButton = async (event) => {
@@ -31,6 +33,7 @@ const updateJournalButton = async (event) => {
     }
   };
   
-  document
-    .querySelector(".deleteJournalButton")
-    .addEventListener("click", deleteJournalButton);  
+  let deleteJournalButtons = document.querySelectorAll(".deleteJournalButton");
+  for (let i = 0; i < deleteJournalButtons.length; i++) {
+    deleteJournalButtons[i].addEventListener("click", deleteJournalButton);
+  }
