@@ -1,9 +1,3 @@
-$(document).load(function () {
-    $('#tour').joyride({
-        autoStart: true
-    });
-  });
-  
 const createJournalButton = document.getElementById("create-journal");
 
 function handleCreateJournalButton (event) {
