@@ -1,4 +1,4 @@
-// Update entry
+// Update entry form
 const updateEntryForm = async (e) => {
     e.preventDefault();
 

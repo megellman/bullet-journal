@@ -1,16 +1,22 @@
-<div class="columns">
-    {{log 'hi'}}
-    <div class="column">
-        <div class="box {{background}}">
-            <a href="journals/{{journal_id}}/entries/{{id}}">
-                <p class="title">
-                    {{title}}
-                    <span class="icon is-small"> 
-                        <i data-id="{{id}}" class="fa-solid fa-pencil"></i>
-                        <i data-id="{{id}}" class="fa-solid fa-trash-can"></i>
-                    </span>
-                </p>
-            </a>
-        </div>
+<div class="container">
+    <div class="column is-three-fifths">
+      <div class="box">
+        <p class="title is-inline">{{entry.title}}</p>
+        <p class="buttons is-inline ml-3">
+          <button data-id="{{entry.id}}" class="button is-small is-info is-inverted">
+            <span class="icon is-small">
+              <i data-id="{{entry.id}}" class="fas fa-pencil"></i>
+            </span>
+          </button>
+          <button data-id="{{entry.id}}" class="button is-small is-danger is-inverted deleteEntryButton">
+            <span class="icon-is-small">
+              <i data-id="{{entry.id}}" class="fas fa-trash-can"></i>
+            </span>
+          </button>
+        </p>
+        <p class="is-4 mt-5">{{entry.content}}</p>
+      </div>
     </div>
+  </div>
 </div>
+

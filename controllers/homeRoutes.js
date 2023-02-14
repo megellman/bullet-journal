@@ -82,10 +82,20 @@ router.get('/journals/:journal_id/entries/:id', withAuth, async (req, res) => {
 
         const entry = entryData.get({ plain: true });
 
+        const entriesData = await Entry.findAll({
+            where: {
+                journal_id: req.params.journal_id
+            }
+        });
+        if (entriesData) {
+            const entries = entriesData.map((entry) => entry.get({ plain: true }));
+
         res.render('journal', {
             entry,
+            entries,
             logged_in: req.session.logged_in,
         });
+    }
     } catch (err) {
         res.status(500).json(err);
     };
@@ -119,26 +129,29 @@ router.get("/create-journal", withAuth, async (req, res) => {
 
 // Render create entry form
 router.get("/create-entry", withAuth, async (req, res) => {
-    let create;
-    let update;
-    let entry;
-
-    if (req.params.entry_id) {
-        create = false;
-        update = true;
-        const entryData = await Entry.findByPk(req.params.entry_id);
-        entry = entryData.get({ plain: true});
-    } else {
-        create = true;
-        update = false;
-    }
-
+    let create = true;
+    let update = false;
+    
     res.render("createEntry", {
         logged_in: req.session.logged_in,
         create,
         update,
-        entry
     });
 });
+
+// Render update entry form 
+router.get("/journals/:journal_id/entries/:id/update-entry", withAuth, async (req, res) => {
+    let create = false;
+    let update = true;
+    const entryData = await Entry.findByPk(req.params.id);
+
+    const entry = entryData.get({plain: true});
+    res.render("createEntry", {
+        logged_in: req.session.logged_in,
+        create,
+        update,
+    });
+});
+
 
 module.exports = router;
