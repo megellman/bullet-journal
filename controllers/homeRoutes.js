@@ -145,12 +145,13 @@ router.get("/journals/:journal_id/entries/:id/update-entry", withAuth, async (re
     let update = true;
     const entryData = await Entry.findByPk(req.params.id);
 
-    const entry = entryData.get({plain: true});
     res.render("createEntry", {
         logged_in: req.session.logged_in,
         create,
         update,
     });
+
+    return;
 });
 
 
