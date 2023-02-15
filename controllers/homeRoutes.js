@@ -129,7 +129,7 @@ router.get("/journals/:journal_id/update-journal", withAuth, async (req, res) =>
 })
 
 // Render create entry form
-router.get("/create-entry", withAuth, async (req, res) => {
+router.get("/journals/:journal_id/create-entry", withAuth, async (req, res) => {
     let create = true;
     let update = false;
     
