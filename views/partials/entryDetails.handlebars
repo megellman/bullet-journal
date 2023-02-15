@@ -1,7 +1,7 @@
 
     <div id="entryDetailColumn" class="column is-three-fifths mr-2">
       <div class="box">
-        <p class="title is-inline">{{entry.title}}</p>
+        <p class="title {{entry.background}}-title is-inline">{{entry.title}}</p> {{log background}}
         <p class="buttons is-inline ml-3">
           <button data-id="{{entry.id}}" class="button is-small is-info is-inverted updateEntryButton">
             <span class="icon is-small">
@@ -14,7 +14,7 @@
             </span>
           </button>
         </p>
-        <p class="is-4 mt-5">{{entry.content}}</p>
+        <p class="{{entry.background}}-body has-text-weight-bold is-4 mt-5">{{entry.content}}</p>
       </div>
     </div>
   </div>
