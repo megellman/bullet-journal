@@ -77,6 +77,16 @@ router.get("/journals/:id", withAuth, async (req, res) => {
 // Specific entry from specific journal
 router.get('/journals/:journal_id/entries/:id', withAuth, async (req, res) => {
     try {
+        const journalData = await Journal.findOne({
+            where: {
+                id: req.params.journal_id
+            }
+        });
+        if (!journalData) {
+            res.status(404).json({ message: "Journal not found" });
+            return;
+        }
+        const journal = journalData.get({ plain: true });
         const entryData = await Entry.findByPk(req.params.id);
 
         const entry = entryData.get({ plain: true });
@@ -84,12 +94,13 @@ router.get('/journals/:journal_id/entries/:id', withAuth, async (req, res) => {
         const entriesData = await Entry.findAll({
             where: {
                 journal_id: req.params.journal_id
-            }
+            },
         });
         if (entriesData) {
             const entries = entriesData.map((entry) => entry.get({ plain: true }));
 
         res.render('journal', {
+            journal,
             entry,
             entries,
             logged_in: req.session.logged_in,
