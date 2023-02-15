@@ -11,7 +11,7 @@ async function getapi(url)
     },
   });
   var data = await response.json();
-  console.log(data);
+  
   document.querySelector('#quote-content').textContent = data.content;
   document.querySelector('#quote-author').textContent = `~${data.author}`;
 }
