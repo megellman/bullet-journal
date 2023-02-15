@@ -6,8 +6,8 @@ const updateJournalForm = async (e) => {
   const title = document.querySelector("#title").value.trim();
   const description = document.querySelector("#description").value.trim();
   const background = document.querySelector("#background-color").value;
-  const id = window.location.href.split("/").pop();
-
+  const id = window.location.href.split("/")[4];
+  
   if (title) {
     updates["title"] = title;
   }
@@ -40,6 +40,4 @@ const updateJournalForm = async (e) => {
   }
 };
 
-document
-  .querySelector(".updateJournalButton")
-  .addEventListener("click", updateJournalForm);
+document.getElementById("newJournal").addEventListener("submit", updateJournalForm);

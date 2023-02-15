@@ -1,8 +1,9 @@
 const router = require("express").Router();
 const { Journal } = require("../../models");
+const withAuth = require("../../utils/auth");
 
 // Create a journal
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     try {
         const journal = await Journal.create({
             title: req.body.title,
@@ -18,7 +19,7 @@ router.post('/', async (req, res) => {
 })
 
 // DELETE a journal
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
     try {
         const journal = await Journal.destroy({
             where: {
@@ -33,8 +34,9 @@ router.delete('/:id', async (req, res) => {
 })
 
 // UPDATE a journal 
-router.put('/:id', async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
     try {
+        console.log(req.params.id);
         const journal = await Journal.update(req.body, {
             where: {
                 id: req.params.id,
