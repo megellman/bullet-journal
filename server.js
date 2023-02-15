@@ -5,7 +5,6 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
-const { helpers } = require("./utils/helpers");
  
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -23,8 +22,7 @@ const sess = {
 };
 app.use(session(sess));
 
-// const hbs = exphbs.create({ helpers });
-const hbs = exphbs.create({}); //for dev only. Use the version on the line above once the helpers are created.
+const hbs = exphbs.create({}); 
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
@@ -33,7 +31,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '/public')));
 app.use('/bulma', express.static(__dirname + '/node_modules/bulma/css/'));
-app.use("/joyride", express.static(__dirname + "/zurb-joyride-80d289b/dist/"));
 
 app.use(routes);
 
