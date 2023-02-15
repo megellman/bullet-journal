@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3001;
 const sess = {
   secret: process.env.SECRET,
   cookie: {
-    maxAge: 86400
+    maxAge: 86400000
   },
   store: new SequelizeStore({
     db: sequelize,
@@ -33,7 +33,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '/public')));
 app.use('/bulma', express.static(__dirname + '/node_modules/bulma/css/'));
-app.use("/joyride", express.static(__dirname + "/zurb-joyride-80d289b/dist/"));
 
 app.use(routes);
 
