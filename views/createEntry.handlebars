@@ -8,17 +8,20 @@
                         placeholder="Enter Title here" />
                     {{/if}}
                     {{#if update}}
-                    <input id="title" class="input" type="text" value="{{entry.title}}" />
+                    <input id="title" class="input" type="text"
+                        value="{{entry.title}}" />
                     {{/if}}
                 </div>
             </div>
 
             <div class="control">
                 {{#if create}}
-                <textarea id="content" class="textarea is-large" placeholder="Enter your thoughts here..."></textarea>
+                <textarea id="content" class="textarea is-large"
+                    placeholder="Enter your thoughts here..."></textarea>
                 {{/if}}
                 {{#if update}}
-                <textarea id="content" class="textarea is-large" />{{entry.content}}</textarea>
+                <textarea id="content"
+                    class="textarea is-large" />{{entry.content}}</textarea>
                 {{/if}}
             </div>
             <div class="field mt-4">
@@ -31,19 +34,21 @@
                     <option value="purple">purple</option>
                 </select>
             </div>
+
+            <div class="field mt-4">
+                <div class="control">
+                    {{#if create}}
+                    <input type="submit" id="create-entry-button"
+                        class="button green is-outline" value="Create" />
+                    {{/if}}
+                    {{#if update}}
+                    <input type="submit" id="update-entry-button"
+                        class="button green is-outline" value="Submit" />
+                    {{/if}}
+                </div>
+            </div>
         </form>
 
-        <div class="field mt-4">
-            <div class="control">
-                {{#if create}}
-                <input type="submit" id="create-entry-button"
-                    class="button green is-outline" value="Create" />
-                {{/if}}
-                {{#if update}}
-                <input type="submit" id="update-entry-button" class="button green is-outline" value="Submit" />
-                {{/if}}
-            </div>
-        </div>
     </div>
 </div>
 

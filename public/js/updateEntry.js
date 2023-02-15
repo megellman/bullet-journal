@@ -2,16 +2,17 @@
 const updateEntryForm = async (e) => {
     e.preventDefault();
 
-    const updates = [];
     const title = document.querySelector('#title').value.trim();
     const content = document.querySelector('#content').value.trim();
     const background = document.querySelector('#background-color').value;
-    const id = window.location.href.split('/').pop();
-
-    if(title) {updates.push(title)};
-    if(content) {updates.push(content)};
-    if(background) {updates.push(background)};
-    updates.push(id);
+    const currentURL = window.location.href.split('/');
+    const id = currentURL[currentURL.length - 2];
+    
+    const updates = {
+        title,
+        content,
+        background
+    }
 
     if(updates){
         const response = await fetch(`/api/entries/${id}`, {
@@ -20,7 +21,7 @@ const updateEntryForm = async (e) => {
             headers: {'Content-Type': 'application/json'},
         });
         if(response.ok){
-            document.location.replace('/journal');
+            document.location.replace('../..');
         } else {
             alert('Failed to update entry');
         }
