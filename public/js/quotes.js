@@ -1,3 +1,4 @@
+// Generates a random quote and appends the journal page with the quote and author name
 const api_url ="https://api.quotable.io/random";
 
 async function getapi(url)

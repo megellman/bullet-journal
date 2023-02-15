@@ -1,3 +1,4 @@
+// Renders create journal form
 const createJournalButton = document.getElementById("create-journal");
 
 function handleCreateJournalButton (event) {

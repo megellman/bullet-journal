@@ -1,3 +1,4 @@
+// Create an entry
 const entryForm = async (e) => {
     
     e.preventDefault();
