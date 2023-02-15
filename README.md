@@ -33,7 +33,6 @@
 | Google Fonts | [https://fonts.google.com/](https://fonts.google.com/)
 | Font Awesome | [https://fontawesome.com/](https://fontawesome.com/)
 | Bcrypt | [https://www.npmjs.com/package/bcrypt](https://www.npmjs.com/package/bcrypt)
-
 <br />
 
 ## Description 
