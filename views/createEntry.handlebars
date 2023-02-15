@@ -35,8 +35,13 @@
 
         <div class="field mt-4">
             <div class="control">
+                {{#if create}}
                 <input type="submit" id="create-entry-button"
                     class="button green is-outline" value="Create" />
+                {{/if}}
+                {{#if update}}
+                <input type="submit" id="update-entry-button" class="button green is-outline" value="Submit" />
+                {{/if}}
             </div>
         </div>
     </div>
