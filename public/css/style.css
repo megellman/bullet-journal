@@ -6,41 +6,51 @@ html, body {
 
 .green {
     background-color: #5f8f7e;
-    font-family: 'Montserrat', sans-serif;
 } 
 .green-title{
     font-family: 'Orelega One', cursive;
 }
+.green-body{
+    font-family: 'Montserrat', sans-serif;
+}
 .red {
     background-color: #cf6c71;
+}
+.red-title{
     font-family: 'Tenor Sans', sans-serif;
+}
+.red-body{
     font-family: 'Archivo Narrow', sans-serif;
 }
 
 .blue {
     background-color: #338894;
+}
+.blue-title{
     font-family: 'Forum', cursive;
+}
+.blue-body{
     font-family: 'Work Sans', sans-serif;
 }
 
 .pink {
     background-color: #e46087;
+}
+.pink-title{
     font-family: 'Della Respira', serif;
+}
+.pink-body{
     font-family: 'Open Sans', sans-serif;
 }
 
 .purple {
     background-color: #69579e;
+}
+.purple-title{
     font-family: 'DM Serif Display', serif;
+}
+.purple-body{
     font-family: 'Red Hat Display', sans-serif;
-}
-
-.title-text {
-    font-family: 'Karla', sans-serif;
-}
-
-.body-text {
-    font-family: 'Merriweather', serif;
 }
 
 .journals {
@@ -51,7 +61,6 @@ html, body {
 .green-notebook {
     background-image: url(../assets/images/green.png);
     font-family: 'Orelega One', cursive;
-
 }
 
 .blue-notebook {
