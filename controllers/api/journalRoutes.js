@@ -36,12 +36,18 @@ router.delete('/:id', withAuth, async (req, res) => {
 // UPDATE a journal 
 router.put('/:id', withAuth, async (req, res) => {
     try {
-        console.log(req.params.id);
-        const journal = await Journal.update(req.body, {
+        const { title, description, background } = req.body.updates;
+
+        const journal = await Journal.update({
+            title,
+            description,
+            background
+        }, {
             where: {
                 id: req.params.id,
             },
         });
+
         if (!journal[0]) {
             res.status(404).json({ message: 'No journal found with this id!' });
             return;

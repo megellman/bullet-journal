@@ -27,4 +27,4 @@ const updateEntryForm = async (e) => {
     } 
 };
 
-document.querySelector('.entry-form').addEventListener('submit', updateEntryForm);
+document.querySelector('#newEntry').addEventListener('submit', updateEntryForm);

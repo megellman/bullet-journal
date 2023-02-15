@@ -2,22 +2,17 @@
 const updateJournalForm = async (e) => {
   e.preventDefault();
 
-  const updates = {};
   const title = document.querySelector("#title").value.trim();
   const description = document.querySelector("#description").value.trim();
   const background = document.querySelector("#background-color").value;
   const id = window.location.href.split("/")[4];
   
-  if (title) {
-    updates["title"] = title;
-  }
-  if (description) {
-    updates["description"] = description;
-  }
-  if (background) {
-    updates["background"] = background;
-  }
-
+  const updates = {
+    title,
+    description,
+    background
+  };
+  
   if (Object.keys(updates).length > 0) {
     // check that updates object is not empty
     const response = await fetch(`/api/journals/${id}`, {
