@@ -41,7 +41,7 @@
 
 Bullet Journal allows users to organize their thoughts and feelings by creating an unlimited number of journals, which can each contain an unlimited number of entries. That way, users can organize journals by topic, time period, or any other category they desire. Journals and entries can also be customized with a user's chosen color for color-coding or just aesthetic preference. Users can edit or delete journals or individual entries at any time.
 
-![Site Langing Page](gif)
+![Site Langing Page](/assets/gifs/user-signUp-createJournal-Demo.gif)
 
 <br/>
 
