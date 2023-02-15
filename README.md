@@ -38,7 +38,7 @@
 
 ## Description 
 
-[Visit the Deployed Site]()
+[Visit the Deployed Site](https://bullet-journal.herokuapp.com/)
 
 Bullet Journal allows users to organize their thoughts and feelings by creating an unlimited number of journals, which can each contain an unlimited number of entries. That way, users can organize journals by topic, time period, or any other category they desire. Journals and entries can also be customized with a user's chosen color for color-coding or just aesthetic preference. Users can edit or delete journals or individual entries at any time.
 
@@ -98,7 +98,9 @@ After you create at least one entry, your Journal page shows a list of entries. 
 <br />
 
 ### Megan Ellman
-
+* [LinkedIn](https://www.linkedin.com/in/megan-ellman/)
+* [GitHub](https://github.com/megellman)
+* [Portfolio](https://megellman.github.io/portfolio/)
 
 <br />
 
