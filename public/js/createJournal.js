@@ -1,3 +1,4 @@
+// Sends form info to backend and renders dashboard
 const journalForm = async (e) => {
     e.preventDefault();
 

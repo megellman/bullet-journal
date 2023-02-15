@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User } = require("../../models");
 
+// Create a new user
 router.post('/', async (req, res) => {
     try {
         const userData = await User.create({
@@ -21,6 +22,7 @@ router.post('/', async (req, res) => {
       }
 });
 
+// When a user logs in, find that user by username, confirm password, and redirect to the homepage
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { username: req.body.username } });
@@ -49,9 +51,9 @@ router.post('/login', async (req, res) => {
 } catch (err) {
   res.status(400).json(err);
 }
-
 });
 
+// Delete the user session when user logs out 
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
