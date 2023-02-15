@@ -7,6 +7,7 @@ async function getapi(url)
     headers: { 'Content-Type': 'application/json'},
   });
   var data = await response.json();
+
   document.querySelector('#quote-content').textContent = data.content;
   document.querySelector('#quote-author').textContent = `~${data.author}`;
 }
