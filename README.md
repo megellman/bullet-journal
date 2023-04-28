@@ -90,7 +90,7 @@ After you create at least one entry, your Journal page shows a list of entries. 
 
 ### Ryan Moscoe 
 
-* [Portfolio](https://rmoscoe.github.io/portfolio/)
+* [Portfolio](https://rmoscoe.github.io/my-portfolio/)
 * [LinkedIn](https://www.linkedin.com/in/ryan-moscoe-8652973/)
 * [Github](https://github.com/rmoscoe)
 
